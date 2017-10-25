@@ -1,7 +1,7 @@
 {
-  "name": "vuex-keg",
-  "version": "0.0.2",
-  "description": "action container",
+  "name": "v-touch2",
+  "version": "0.0.1",
+  "description": "vue2 touch",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/babel-node --presets stage-2 node_modules/mocha/bin/_mocha --recursive -R spec",
@@ -9,23 +9,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bichikim/keg.git"
+    "url": "git+https://github.com/bichikim/v-touch.git"
   },
   "keywords": [
-    "redux",
-    "vuex",
-    "plugin",
-    "thunk",
-    "react",
     "vue",
-    "asyn"
+    "plugin",
+    "touch"
   ],
   "author": "bichi",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bichikim/keg/issues"
+    "url": "https://github.com/bichikim/v-touch2/issues"
   },
-  "homepage": "https://github.com/bichikim/keg#readme",
+  "homepage": "https://github.com/bichikim/v-touch2#readme",
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-eslint": "^7.2.3",
@@ -43,10 +39,10 @@
     "eslint-plugin-html": "^3.1.1",
     "eslint-plugin-vue": "^3.8.0",
     "mocha": "^3.4.2",
-    "vue": "^2.4.2",
-    "vuex": "^2.3.1"
+    "vue": "^2.4.2"
   },
   "dependencies": {
+    "hammerjs": "^2.0.8",
     "lodash": "^4.17.4"
   }
 }
