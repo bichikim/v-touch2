@@ -1,3 +1,4 @@
+
 /**
  * @module * @author Bichi Kim [bichi@live.co.kr]
  * @copyright (c) Naree Co.
@@ -15,7 +16,7 @@ export default {
    * @param {Object}Vue
    * @param {Object}options
    */
-  install: function(Vue, options = {}){
-    Vue.directive('touch', touches(options))
+  install(Vue, {name = 'touch', ...others} = {}){
+    Vue.directive(name, touches(others))
   },
 }
