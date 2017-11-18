@@ -48,9 +48,13 @@ module.exports = {
         'this': {
           before: true,
           after: true,
+        },
+        'case':{
+          after: true,
         }
       }
     }],
     'space-before-blocks': ['error', 'never'],
+    'func-style': ['error', 'declaration', {'allowArrowFunctions': true }],
   }
 };
