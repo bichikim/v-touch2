@@ -1,3 +1,4 @@
+
 /**
  *
  * @module * @author Bichi Kim [bichi@live.co.kr]
@@ -117,11 +118,13 @@ export default (options = {}) => {
     tap: {threshold: 50, time: 600, posThreshold: 50},
   }, options)
   return {
-    acceptStatement: true,
+    // todo this is not working in Vue2
+    // see https://github.com/vuejs/vue/issues/3309 to support it
+    // acceptStatement: true,
     update(el, binding){
       const hammer = el.__hammer__
       if(!hammer){
-        return
+        throw new Error(`[v-touch2] no hammer. hammer: ${hammer}`)
       }
       const {gesture, event} = readBinding(binding)
       if(!gesture || !event){
@@ -170,12 +173,6 @@ export default (options = {}) => {
         el.__hammer__.destroy()
         el.__hammer__ = null
       }
-      _.forEach(_gestures, (name) => {
-        const gestureName = `__${name}__`
-        if(el[gestureName]){
-          el[gestureName] = null
-        }
-      })
     },
   }
 }
