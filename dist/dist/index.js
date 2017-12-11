@@ -16,13 +16,12 @@ function _objectWithoutProperties(obj, keys) {
   var target = {};for (var i in obj) {
     if (keys.indexOf(i) >= 0) continue;if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;target[i] = obj[i];
   }return target;
-}
-/**
- * @module * @author Bichi Kim [bichi@live.co.kr]
- * @copyright (c) Naree Co.
- * @license MIT
- * @module
- */
+} /**
+   * @author Bichi Kim <bichi@live.co.kr>
+   * @copyright Naree Co.
+   * @license MIT
+   * @module
+   */
 
 /**
  * @type {Object}

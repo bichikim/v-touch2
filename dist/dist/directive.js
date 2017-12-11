@@ -28,13 +28,13 @@ var _slicedToArray = function () {
       throw new TypeError("Invalid attempt to destructure non-iterable instance");
     }
   };
-}();
-/**
- *
- * @module * @author Bichi Kim [bichi@live.co.kr]
- * @copyright (c) Naree Co.
- * @license MIT
- */
+}(); /**
+      *
+      * @author Bichi Kim <bichi@live.co.kr>
+      * @copyright Naree Co.
+      * @license MIT
+      * @module
+      */
 
 var _hammerjs = require('hammerjs');
 
@@ -239,7 +239,7 @@ exports.default = function () {
       var _vNode$data$attrs = vNode.data.attrs,
           attrs = _vNode$data$attrs === undefined ? {} : _vNode$data$attrs;
 
-      var option = attrs[gesture + '-option'] || {};
+      var option = attrs[gesture + '-options'] || {};
       var defaultOption = myOption[gesture] || {};
       Object.assign(option, defaultOption);
       // init Hammer

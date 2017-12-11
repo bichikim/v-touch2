@@ -1,7 +1,6 @@
-
 /**
- * @module * @author Bichi Kim [bichi@live.co.kr]
- * @copyright (c) Naree Co.
+ * @author Bichi Kim <bichi@live.co.kr>
+ * @copyright Naree Co.
  * @license MIT
  * @module
  */

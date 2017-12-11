@@ -1,9 +1,9 @@
-
 /**
  *
- * @module * @author Bichi Kim [bichi@live.co.kr]
- * @copyright (c) Naree Co.
+ * @author Bichi Kim <bichi@live.co.kr>
+ * @copyright Naree Co.
  * @license MIT
+ * @module
  */
 import Hammer from 'hammerjs'
 import _ from 'lodash'
@@ -160,7 +160,7 @@ export default (options = {}) => {
         return
       }
       const {attrs = {}} = vNode.data
-      const option = attrs[`${gesture}-option`] || {}
+      const option = attrs[`${gesture}-options`] || {}
       const defaultOption = myOption[gesture] || {}
       Object.assign(option, defaultOption)
       // init Hammer
