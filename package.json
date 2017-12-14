@@ -1,6 +1,6 @@
 {
   "name": "v-touch2",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "vue2 touch",
   "main": "dist/index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bichikim/v-touch.git"
+    "url": "git+https://github.com/bichikim/v-touch2.git"
   },
   "keywords": [
     "vue",
