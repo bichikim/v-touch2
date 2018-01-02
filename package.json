@@ -1,6 +1,6 @@
 {
-  "name": "v-touch2",
-  "version": "0.0.2",
+  "name": "@pjfactory/v-touch2",
+  "version": "0.0.3",
   "description": "vue2 touch",
   "main": "dist/index.js",
   "scripts": {

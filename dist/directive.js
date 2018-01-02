@@ -123,16 +123,18 @@ var getHandler = function getHandler(binding) {
   if (_lodash2.default.isFunction(value)) {
     handler = value;
   } else if (_lodash2.default.isObject(value) && _lodash2.default.isFunction(value.handler)) {
-    handler = function handler() {
+    handler = function handler(event) {
       value.handler(binding.value.parameter);
+      event.preventDefault();
     };
   } else if (_lodash2.default.isArray(value)) {
     var _value = _toArray(value),
         func = _value[0],
         funcArguments = _value.slice(1);
 
-    handler = function handler() {
+    handler = function handler(event) {
       func.apply(undefined, _toConsumableArray(funcArguments));
+      event.preventDefault();
     };
   } else {
     return;
@@ -190,7 +192,7 @@ exports.default = function () {
       }
       // hammer
       if (!el.__hammer__) {
-        el.__hammer__ = new _hammerjs2.default.Manager(el);
+        el.__hammer__ = new _hammerjs2.default.Manager(el, { touchAction: 'auto' });
         // Owing to a Hammer bug I add this.
         // In the Hammer without swipe environment, tap options is not working
         el.__hammer__.add(new _hammerjs2.default.Swipe());

@@ -94,13 +94,15 @@ const getHandler = (binding) => {
   if(_.isFunction(value)){
     handler = value
   }else if(_.isObject(value) && _.isFunction(value.handler)){
-    handler = () => {
+    handler = (event) => {
       value.handler(binding.value.parameter)
+      event.preventDefault()
     }
   }else if(_.isArray(value)){
     const [func, ...funcArguments] = value
-    handler = () => {
+    handler = (event) => {
       func(...funcArguments)
+      event.preventDefault()
     }
   }else{
     return
@@ -148,7 +150,7 @@ export default (options = {}) => {
       }
       // hammer
       if(!el.__hammer__){
-        el.__hammer__ = new Hammer.Manager(el)
+        el.__hammer__ = new Hammer.Manager(el, {touchAction: 'auto'})
         // Owing to a Hammer bug I add this.
         // In the Hammer without swipe environment, tap options is not working
         el.__hammer__.add(new Hammer.Swipe())
