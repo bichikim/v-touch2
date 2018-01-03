@@ -117,7 +117,7 @@ const getHandler = (binding) => {
  */
 export default (options = {}) => {
   const myOption = Object.assign({
-    tap: {threshold: 50, time: 600, posThreshold: 50},
+    tap: {threshold: 50, time: 500, posThreshold: 50},
   }, options)
   return {
     // todo this is not working in Vue2
